@@ -1,0 +1,31 @@
+<div class="app-input">
+
+  <h2>Bets and Result</h2>
+
+  <form [formGroup]="form">
+    <div class="form-group " [ngClass]="{'has-danger': inputData.invalid&&inputData.dirty}">
+      <label for="inputTextarea">Please input and submit the bets and result to generate dividends:</label>
+      <textarea class="form-control" id="inputTextarea" rows="10" formControlName="inputData"></textarea>
+      <div class="form-control-feedback" *ngIf="inputData.errors?.required&&inputData.dirty">Please input bets and result.</div>
+      <div class="form-control-feedback" *ngIf="inputData.errors?.wrongFormat&&inputData.dirty">Please input bets and result in correct format.</div>
+
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" (click)="submit()" [disabled]="form.invalid">Submit Bets and Result</button>
+      <button type="button" class="btn btn-secondary" (click)="clear()">Clear</button>
+      <button type="button" class="btn btn-success float-right" (click)="loadExampleData()">Load example data</button>
+    </div>
+  </form>
+
+</div>
+
+<div class="app-output">
+  <h2>Dividends</h2>
+  <div class="output-list">
+    <ul class="list-group">
+      <li *ngFor="let dividend of dividends" class="list-group-item">{{dividend | toteDividend}}</li>
+
+    </ul>
+
+  </div>
+</div>
