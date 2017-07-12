@@ -2,12 +2,12 @@
 
 ## Overview
 
-The project is to demo calculate the dividends for a simplified form of Tote betting using Angular 4, bootstrap 4, SCSS, CSS3 and HTML5.
+The project is to demo calculation of the dividends for a simplified form of Tote betting using Angular 4, bootstrap 4, SCSS, CSS3 and HTML5.
 
-## project structure
+## Project structure
 This is a simple demo web application project, so we only have a tote-bet feature module and a shared module under the root app module.
 
-The shared module is for reusable pipes, directives, etc. for other feature modules.
+The shared module has reusable pipes, directives, etc. for other feature modules.
 
 The tote-bet feature module contains bet-panel UI component, services, models, etc. 
 The bet-panel component allows user to input bets and results data, load example data and submit the data to generate the dividends output.
